@@ -33,7 +33,6 @@ class UserController extends Controller
         $users = User::all();
 
         return UserResource::collection($users);
-
     }
 
 
@@ -73,7 +72,6 @@ class UserController extends Controller
 
 
         return UserResource::make($user);
-
     }
 
 
@@ -89,7 +87,6 @@ class UserController extends Controller
     {
 
         return UserResource::make($user);
-
     }
 
 
@@ -119,7 +116,6 @@ class UserController extends Controller
         if (isset($validated['password'])) {
 
             $validated['password'] = bcrypt($validated['password']);
-
         }
 
 
@@ -129,7 +125,6 @@ class UserController extends Controller
 
 
         return UserResource::make($user);
-
     }
 
 
@@ -147,7 +142,5 @@ class UserController extends Controller
         $user->delete();
 
         return response()->json(['message' => 'Usuario eliminado correctamente.']);
-
     }
-
 }
